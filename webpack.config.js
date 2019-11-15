@@ -1,10 +1,12 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-module.exports = () => {
+module.exports = env => {
+  const isProduction = env === 'production';
+
   return {
     mode: 'production',
 
-    devtool: 'source-map',
+    devtool: isProduction ? 'nosources-source-map' : 'source-map',
 
     resolve: {
       modules: ['src', 'node_modules'],
@@ -39,6 +41,10 @@ module.exports = () => {
         template: './src/index.html',
         filename: './index.html'
       })
-    ]
+    ],
+
+    performance: {
+      hints: isProduction ? 'warning' : false
+    }
   };
 };
