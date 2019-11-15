@@ -1,4 +1,5 @@
 import * as React from 'react';
+import './Hello.css';
 
 export interface HelloProps {
   compiler: string;
@@ -6,7 +7,7 @@ export interface HelloProps {
 }
 
 export const Hello = (props: HelloProps) => (
-  <h1>
+  <h1 className="text">
     Hello from {props.compiler} and {props.framework}
   </h1>
 );

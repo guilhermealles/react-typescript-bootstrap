@@ -24,6 +24,10 @@ module.exports = () => {
           loader: 'source-map-loader'
         },
         {
+          test: /\.css$/,
+          use: [{ loader: 'style-loader' }, { loader: 'css-loader' }]
+        },
+        {
           test: /\.html$/,
           use: [{ loader: 'html-loader' }]
         }
