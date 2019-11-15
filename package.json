@@ -1,0 +1,19 @@
+{
+  "name": "react-typescript-bootstrap",
+  "version": "1.0.0",
+  "description": "Bootstrap for React+Typescript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guilhermealles/react-typescript-bootstrap.git"
+  },
+  "author": "Guilherme Alles",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/guilhermealles/react-typescript-bootstrap/issues"
+  },
+  "homepage": "https://github.com/guilhermealles/react-typescript-bootstrap#readme"
+}
