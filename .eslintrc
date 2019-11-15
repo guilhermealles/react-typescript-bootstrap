@@ -1,0 +1,38 @@
+{
+  "parser": "babel-eslint",
+
+  "plugins": [
+    "react",
+    "react-hooks",
+    "jsx-a11y"
+  ],
+
+  "env": {
+    "browser": true,
+    "jest": true
+  },
+
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true,
+      "modules": true
+    }
+  },
+
+  "extends": ["eslint:recommended", "plugin:react/recommended", "plugin:jsx-a11y/recommended"],
+
+  "rules": {
+    "no-mixed-spaces-and-tabs": "error",
+    "no-tabs": "error",
+
+    "semi": ["error", "always"],
+    "semi-spacing": "warn",
+    "no-extra-semi": "error",
+
+    "prefer-arrow-callback": "warn",
+    "no-extra-boolean-cast": "off",
+
+    "react/prop-types": "error",
+    "react-hooks/rules-of-hooks": "error"
+  }
+}
