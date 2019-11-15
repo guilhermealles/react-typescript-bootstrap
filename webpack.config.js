@@ -1,3 +1,5 @@
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
 module.exports = () => {
   return {
     mode: 'production',
@@ -5,7 +7,8 @@ module.exports = () => {
     devtool: 'source-map',
 
     resolve: {
-      extensions: ['.ts', '.tsx']
+      modules: ['src', 'node_modules'],
+      extensions: ['.ts', '.tsx', '.js']
     },
 
     module: {
@@ -19,13 +22,19 @@ module.exports = () => {
           enforce: 'pre',
           test: /\.js$/,
           loader: 'source-map-loader'
+        },
+        {
+          test: /\.html$/,
+          use: [{ loader: 'html-loader' }]
         }
       ]
     },
 
-    externals: {
-      react: 'React',
-      'react-dom': 'ReactDOM'
-    }
+    plugins: [
+      new HtmlWebpackPlugin({
+        template: './src/index.html',
+        filename: './index.html'
+      })
+    ]
   };
 };
