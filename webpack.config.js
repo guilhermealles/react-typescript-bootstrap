@@ -1,11 +1,11 @@
 module.exports = () => {
   return {
-    mode: "production",
+    mode: 'production',
 
-    devtool: "source-map",
+    devtool: 'source-map',
 
     resolve: {
-      extensions: [".ts", ".tsx"]
+      extensions: ['.ts', '.tsx']
     },
 
     module: {
@@ -13,19 +13,19 @@ module.exports = () => {
         {
           test: /\.ts(x?)$/,
           exclude: /node_modules/,
-          use: [{ loader: "ts-loader" }]
+          use: [{ loader: 'ts-loader' }]
         },
         {
-          enforce: "pre",
+          enforce: 'pre',
           test: /\.js$/,
-          loader: "source-map-loader"
+          loader: 'source-map-loader'
         }
       ]
     },
 
     externals: {
-      react: "React",
-      "react-dom": "ReactDOM"
+      react: 'React',
+      'react-dom': 'ReactDOM'
     }
   };
 };
